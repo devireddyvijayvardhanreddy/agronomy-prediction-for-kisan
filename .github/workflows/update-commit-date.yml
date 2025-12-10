@@ -1,0 +1,28 @@
+name: Update Commit Date
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-date:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+      - name: Update README commit date to 2 years ago
+        run: |
+          export GIT_COMMITTER_DATE="Dec 10 2023 07:00:00 +0530"
+          export GIT_AUTHOR_DATE="Dec 10 2023 07:00:00 +0530"
+          git commit --amend --no-edit
+          
+      - name: Force push changes
+        run: |
+          git push origin main --force
+          
