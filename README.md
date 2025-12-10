@@ -1,5 +1,6 @@
-# Agronomy Prediction for Kisan
+# Agriculture- Crop and yield Predictor
 ## Abstract
+
 We propose an Intelligent Crop Recommendation and Yield prediction system using Machine Learning that predicts crop suitability by factoring all relevant data such as temperature, rainfall, location, and soil condition. The Yield is predicted based on the parameters of area of land available, agricultural season and the past observations of yield prediction
 
 This system is primarily concerned with performing Agro Consultants principal role, which is to provide crop recommendations to farmer and the expected yield for that crop.
